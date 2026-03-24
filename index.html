@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="author" content="SkVOLVlVQU4gSFNVRUggQVJDSElURUNUUw==">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>薛仁淵建築師事務所 - 專案整合平台</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Roboto+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+/* ══════════════════════════════════════
+   延續事務所標準配色 (與進度表一致)
+   ══════════════════════════════════════ */
+:root {
+  --bg: #FFFFFF; --bg2: #F9FAFB;
+  --text: #111111; --text2: #4B5563; --text3: #9CA3AF;
+  --border: #E5E7EB; --border-dark: #111111;
+  --active-bg: #2C5282; --today: #E53E3E;
+  --font: 'Noto Sans TC', '微軟正黑體', sans-serif;
+  --font-mono: 'Roboto Mono', Consolas, monospace;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: var(--font); color: var(--text); background: var(--bg);
+  display: flex; flex-direction: column; min-height: 100vh;
+}
+.container { max-width: 1100px; margin: 0 auto; padding: 5rem 2rem; flex: 1; width: 100%; }
+
+/* 標題區塊優化 */
+.header { border-bottom: 2px solid var(--border-dark); padding-bottom: 1.5rem; margin-bottom: 3.5rem; }
+.header .firm-name { display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap; margin-bottom: 0.5rem; }
+.header h1 { font-size: 26px; font-weight: 700; letter-spacing: 0.15em; }
+.header .en-name { font-family: var(--font-mono); font-size: 16px; font-weight: 500; color: var(--text2); letter-spacing: 0.05em; }
+.header .sub-title { font-size: 13px; color: var(--active-bg); font-weight: 700; letter-spacing: 0.1em; }
+
+.menu-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 1.5rem; }
+.menu-item {
+  text-decoration: none; color: inherit; border: 1px solid var(--border);
+  padding: 2.5rem 2rem; display: flex; flex-direction: column;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1); position: relative; background: var(--bg);
+}
+.menu-item:hover { border-color: var(--border-dark); transform: translateY(-5px); box-shadow: 8px 8px 0px rgba(0,0,0,0.05); }
+.menu-item.main { border-left: 5px solid var(--active-bg); }
+.menu-item.tool { border-left: 5px solid var(--text3); }
+.menu-item::after { content: '→'; position: absolute; right: 1.5rem; bottom: 1.5rem; font-family: var(--font-mono); font-weight: 700; opacity: 0.15; transition: 0.2s; }
+.menu-item:hover::after { opacity: 1; color: var(--active-bg); transform: translateX(5px); }
+
+.menu-item .num { font-family: var(--font-mono); font-size: 11px; color: var(--text3); margin-bottom: 1.2rem; }
+.menu-item h2 { font-size: 19px; font-weight: 700; margin-bottom: 0.6rem; letter-spacing: 0.05em; }
+.menu-item p { font-size: 13px; color: var(--text2); line-height: 1.5; }
+
+.locked { background: var(--bg2); cursor: default; }
+.locked:hover { transform: none; box-shadow: none; border-color: var(--border); }
+.badge { display: inline-block; font-size: 10px; padding: 2px 8px; background: var(--border); color: var(--text3); margin-top: 15px; align-self: flex-start; font-weight: 700; }
+
+.footer { padding: 2.5rem; text-align: center; border-top: 1px solid var(--border); background: var(--bg2); }
+.footer p { font-size: 11px; color: var(--text3); font-family: var(--font-mono); letter-spacing: 0.05em; }
+
+@media (max-width: 600px) { .container { padding: 3rem 1.5rem; } .header h1 { font-size: 22px; } .header .en-name { font-size: 13px; } }
+</style>
+</head>
+<body>
+<div class="container">
+  <header class="header">
+    <div class="firm-name">
+      <h1>薛仁淵建築師事務所</h1>
+      <span class="en-name">JEN-YUAN HSUEH ARCHITECTS</span>
+    </div>
+    <p class="sub-title">專案整合平台 │ ARCHITECTURAL PRACTICE PLATFORM</p>
+  </header>
+
+  <div class="menu-grid">
+    <a href="schedule.html" class="menu-item main">
+      <div class="num">MODULE 01</div>
+      <h2>專案工作進度表</h2>
+      <p>控制各案場關鍵時程、任務關聯與里程碑，落實事務所實務管控邏輯。</p>
+    </a>
+
+    <div class="menu-item tool locked">
+      <div class="num">MODULE 02</div>
+      <h2>建築設計費試算表</h2>
+      <p>依據各級酬金標準、基地規模及工程預估造價，進行精確酬金試算。</p>
+      <span class="badge">SYSTEM PENDING</span>
+    </div>
+
+    <div class="menu-item tool locked">
+      <div class="num">MODULE 03</div>
+      <h2>開發面積試算表</h2>
+      <p>針對土地法規限制、容積獎勵項目及開發效能進行初步面積分析。</p>
+      <span class="badge">SYSTEM PENDING</span>
+    </div>
+
+    <div class="menu-item tool locked">
+      <div class="num">MODULE 04</div>
+      <h2>量體評估表 (快速版)</h2>
+      <p>初期提案之建築體積模擬，快速產出各層面積、退縮空間及高度數據。</p>
+      <span class="badge">SYSTEM PENDING</span>
+    </div>
+
+    <div class="menu-item tool locked">
+      <div class="num">MODULE 05</div>
+      <h2>產權試算表</h2>
+      <p>土地持分比例、各單元室內主附建物與公設分配比例自動化計算。</p>
+      <span class="badge">SYSTEM PENDING</span>
+    </div>
+
+    <div class="menu-item tool locked">
+      <div class="num">MODULE 06</div>
+      <h2>常用文件工具</h2>
+      <p>提供事務所各類標準化文件範本、契約草案、建管申請表單及常用法規圖塊整合。</p>
+      <span class="badge">SYSTEM PENDING</span>
+    </div>
+  </div>
+</div>
+
+<footer class="footer">
+  <p id="copyText">COPYRIGHT &copy; 2026 JEN-YUAN HSUEH ARCHITECTS │ 薛仁淵建築師事務所 開發</p>
+</footer>
+
+<script>
+// 保護機制：鎖定右鍵
+document.addEventListener('contextmenu', e => e.preventDefault());
+// 開發中提示
+document.querySelectorAll('.locked').forEach(item => {
+  item.addEventListener('click', (e) => {
+    e.preventDefault();
+    const hint = document.createElement('div');
+    hint.style.cssText = "position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);background:#111;color:#fff;padding:15px 30px;font-size:13px;z-index:1000;box-shadow:0 10px 30px rgba(0,0,0,0.3); border: 1px solid #333;";
+    hint.textContent = "此實務模組正在整合中，敬請期待。";
+    document.body.appendChild(hint);
+    setTimeout(() => hint.remove(), 1500);
+  });
+});
+</script>
+</body>
+</html>
