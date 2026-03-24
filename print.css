@@ -1,0 +1,37 @@
+/* ══════════════════════════════════════
+   列印專用設定 (A3 橫向)
+   ══════════════════════════════════════ */
+@page { size: A3 landscape; margin: 8mm 8mm 18mm 8mm; }
+
+.no-print { display: none !important; }
+.wrap { max-width: none; padding: 0 0 2mm; }
+.page-hdr { padding-bottom: .4rem; margin-bottom: .4rem; border-bottom: 1px solid #111; }
+.gantt-outer { overflow: visible; border: 1px solid #111; border-radius: 0; }
+.legend { border-radius: 0; border: 1px solid #111; }
+
+table { table-layout: fixed; }
+.gantt-outer table { width: 100% !important; }
+.grp-sticky { position: static !important; }
+
+thead th, tbody td, tr.grp-row td { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+th.th-task, th.th-unit, td.td-task, td.td-unit { position: relative !important; transform: none !important; left: auto !important; }
+
+th.th-task, td.td-task { width: 115px; min-width: 115px; }
+th.th-unit, td.td-unit { width: 52px; min-width: 52px; }
+th.th-wk, td.td-wk { width: auto; min-width: 18px; }
+
+th.lny-col { -webkit-print-color-adjust: exact; print-color-adjust: exact; background: var(--lny-bg) !important; }
+td.lny-col { -webkit-print-color-adjust: exact; print-color-adjust: exact; background: var(--lny-bg) !important; }
+
+.bar { -webkit-print-color-adjust: exact; print-color-adjust: exact; height: 14px; font-size: 7.5px; box-shadow: 1.5px 1.5px 0px rgba(0,0,0,0.2); }
+.bar-fl-date { font-size: 6.5px; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+.bar-date { font-size: 6px; }
+.ms-diamond { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+
+tbody tr:hover { background: transparent !important; }
+tbody tr:hover td.td-task, tbody tr:hover td.td-unit { background: var(--bg) !important; }
+
+.mbg, .panel { display: none !important; }
+.notes-section { page-break-inside: avoid; border: 1px solid #111; }
+.task-sort-btns { display: none !important; }
+.notes-copy-row { -webkit-print-color-adjust: exact; print-color-adjust: exact; font-size: 8pt; letter-spacing: .08em; padding: 3pt 8pt; }
