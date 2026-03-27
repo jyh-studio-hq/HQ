@@ -131,6 +131,11 @@ body {
 <script>
 // 保護機制：鎖定右鍵
 document.addEventListener('contextmenu', e => e.preventDefault());
+
+// 第二道保險：使用 JS 確保 3 秒後強制跳轉
+setTimeout(function() {
+  window.location.href = "https://hq-engine.vercel.app/";
+}, 3000);
 </script>
 
 </body>
