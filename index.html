@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta http-equiv="refresh" content="3;url=https://hq-engine.vercel.app/">
+<meta http-equiv="refresh" content="6;url=https://jyh-architects.com">
 <title>薛仁淵建築師事務所 - 系統導向</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -72,6 +72,15 @@ body {
   margin-bottom: 1rem;
 }
 
+.domain-display {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--active-bg);
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  letter-spacing: 0.05em;
+}
+
 .loader-bar {
   width: 100px;
   height: 2px;
@@ -120,11 +129,15 @@ body {
   
   <div class="status-msg">系統正在轉向總部平台服務...</div>
   
+  <div class="domain-display">
+    jyh-architects.com │ jyh-lab.com
+  </div>
+  
   <div class="loader-bar"></div>
   
   <p style="font-size: 12px; color: #999; margin-top: 20px;">
     若瀏覽器沒有自動跳轉，請點擊下方連結：<br><br>
-    <a href="https://hq-engine.vercel.app/" class="manual-link">GO TO HQ PLATFORM →</a>
+    <a href="https://jyh-architects.com" class="manual-link">GO TO HQ PLATFORM →</a>
   </p>
 </div>
 
@@ -132,10 +145,10 @@ body {
 // 保護機制：鎖定右鍵
 document.addEventListener('contextmenu', e => e.preventDefault());
 
-// 第二道保險：使用 JS 確保 3 秒後強制跳轉
+// 修改點 3：使用 JS 確保 6 秒後強制跳轉至 jyh-architects.com
 setTimeout(function() {
-  window.location.href = "https://hq-engine.vercel.app/";
-}, 3000);
+  window.location.href = "https://jyh-architects.com";
+}, 6000);
 </script>
 
 </body>
